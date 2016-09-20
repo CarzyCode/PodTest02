@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.name         = "loginlib"
   s.version      = "0.0.1"
-  s.summary      = "A short description of loginlib."
+  s.summary      = "A delightful iOS and OS X networking framework.."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,7 +25,14 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-			ssssssssssssssssssssssssssss
+  #ifndef TARGET_OS_IOS
+  #define TARGET_OS_IOS TARGET_OS_IPHONE
+  #endif
+  #ifndef TARGET_OS_WATCH
+  #define TARGET_OS_WATCH 0
+  #endif
+  #ifndef TARGET_OS_TV
+  #define TARGET_OS_TV 0
                    DESC
 
   s.homepage     = "https://github.com/CarzyCode/PodTest02"
